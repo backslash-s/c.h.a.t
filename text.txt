@@ -1,5 +1,0 @@
--no need to remember commands
--access the power of web and ai inside the terminal
--Uses state-of-the-art GPT-3 based language model to answer your all of your queries 
--fine tune your answers according to your needs
--access to all of your previous queries
