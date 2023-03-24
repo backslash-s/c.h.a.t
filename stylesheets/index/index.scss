@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500&display=swap');
+
+//variables
+$dot-red: #F00000;
+$dot-yellow: #FFB700;
+$dot-green: #70E000;
+$font-color: #F4F0BB;
+$primary: #272727;
+$secondary: #191919;
+$font: 'JetBrains Mono', monospace;
+
+//mixin for dots
+@mixin dots($color: $dot-red){
+    width: 14px;
+    height: 14px;
+    background: $color;
+    position: relative;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: $secondary;
+}
+
+.navbar{
+    padding: 10px;
+    font-family: $font;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    background: $secondary;
+    z-index: 1;
+    box-shadow: 0px 0px 44px 4px rgba(0,0,0,0.75);
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        margin-right: 50px;
+    }
+    li{
+        list-style: none;
+        margin-right: 25px;
+        font-size: 23px;
+    }
+    img{
+        filter:invert(1);
+        width: 40px;
+        margin: 10px;
+        // justify-self: start;
+    }
+    a{
+        text-decoration: none;
+        color: $font-color;
+        // font-size: 25px;
+    }
+}
+
+.container{
+    max-width: 950px;
+    max-height: 50vh;
+    margin-left: 2%;
+    margin-top: 5%;
+    box-shadow: 0px 0px 44px 4px rgba(0,0,0,0.75);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.terminal{
+    .titlebar{
+        background: $primary;
+        position: relative;
+        display: grid;
+        grid-template-columns: 120fr 99fr;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 6px 0;
+        box-shadow: 0px 3px 7px -2px rgb(17, 17, 17);
+        .title{
+            color: $font-color;
+            font-family: $font;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            // padding: 1px;
+        }
+        .dots{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            padding-right: 10px;
+            .dot-red{
+                @include dots;
+            }
+            .dot-yellow{
+                @include dots($color: $dot-yellow);
+            }
+            .dot-green{
+                @include dots($color: $dot-green);
+            }
+        }
+    }
+    .terminal-screen{
+        background: $secondary;
+        font-family: $font;
+        color: $font-color;
+        margin-bottom: 40%;
+        display: flex;
+        flex-direction: column;
+        p {
+            margin-left: 7px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            // margin-bottom: 3px;
+        }
+        #cmd-1{
+            margin-top: 10px;
+        }
+        #cmd-1::after,
+        #cmd-2::after{
+            content: "";
+            width: 2px;
+            height: 20px;
+            background: $dot-yellow;
+            display: inline;
+        }
+    }
+}
+
+.section-1{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 10px;
+    opacity: 0;
+    min-height: 100vh;
+    // margin-top: 8%;
+}
+
+.subtext{
+    margin-top: 5%;
+    margin-left: 2%;
+    .heading{
+        color: $font-color;
+        font-size: 80px;
+        font-family: $font;
+    }
+    .desc-1{
+        color: $font-color;
+        font-size: 55px;
+        font-family: $font;
+    }
+    .desc-2{
+        color: $font-color;
+        font-size: 25px;
+        font-family: $font;
+        padding-top: 15px;
+    }
+}
+
+.section-2{
+    padding: 30px;
+    min-height: 100vh;
+    font-family: $font;
+    font-size: 30px;
+    color: $font-color;
+    .heading-sec-2{
+        opacity: 0;
+        transition: all 1s;
+        font-size: 50px;
+    }
+    .features{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .feature{
+        padding: 50px;
+        margin-bottom: 2%;
+        width: 30vw;
+        border: 1px solid $dot-yellow;
+    }
+    .hiddenl{
+        opacity: 0;
+        transition: all 1s;
+        align-self: flex-start;
+    }
+    .hiddenr{
+        opacity: 0;
+        transition: all 1s;
+        align-self:flex-end;
+    }
+    .showl{
+        opacity: 1;
+        transform: translateX(40%);
+        // margin-left: 20%;
+    }
+    .showr{
+        opacity: 1;
+        transform: translateX(-40%);
+    }
+    .showhead{
+        opacity: 1;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+}
+
+
+
