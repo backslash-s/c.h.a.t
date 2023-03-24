@@ -1,31 +1,31 @@
-// let i = 0
-// let j = 0
-// let cmdOne = document.getElementById("cmd-1")
-// let cmdTwo = document.getElementById("cmd-2")
-// let text1 = " chat \"What is chatgpt?\""
-// let text2 = " ChatGPT is an artificial intelligence chatbot developed by OpenAI. It is built on top of OpenAI's GPT-3 family of large language models and has been fine-tuned using both supervised and reinforcement learning techniques."
+let i = 0
+let j = 0
+let cmdOne = document.getElementById("cmd-1")
+let cmdTwo = document.getElementById("cmd-2")
+let text1 = " chat \"What is chatgpt?\""
+let text2 = " ChatGPT is an artificial intelligence chatbot developed by OpenAI. It is built on top of OpenAI's GPT-3 family of large language models and has been fine-tuned using both supervised and reinforcement learning techniques."
 
-// function autoType1(){
-//     if(i < text1.length){
-//         cmdOne.innerHTML += text1.charAt(i)
-//         i+=1
-//         setTimeout(autoType1, 20)
-//     }
-// }
-// autoType1()
+function autoType1(){
+    if(i < text1.length){
+        cmdOne.innerHTML += text1.charAt(i)
+        i+=1
+        setTimeout(autoType1, 20)
+    }
+}
+autoType1()
 
-// if(cmdOne.innerHTML.length === 12){
-//     setTimeout(autoType2, 1020)
-// }
+if(cmdOne.innerHTML.length === 12){
+    setTimeout(autoType2, 1020)
+}
 
-// function autoType2(){
-//     if(j < text2.length){
+function autoType2(){
+    if(j < text2.length){
         
-//         cmdTwo.innerHTML += text2.charAt(j)
-//         j+=1
-//         setTimeout(autoType2, 20)
-//     }
-// }
+        cmdTwo.innerHTML += text2.charAt(j)
+        j+=1
+        setTimeout(autoType2, 20)
+    }
+}
 
 let sectionOne = document.getElementById('section-1') 
 
