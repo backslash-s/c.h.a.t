@@ -17,16 +17,24 @@ $font: "JetBrains Mono", monospace;
     font-family: $font;
 }
 
-.container {
-    max-width: 1200px;
+.container-abt {
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-    border: #191919 solid 1px; //temporary
+    margin-top: 10vh;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+    box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.60);
     .aboutus {
         display: flex;
         flex-direction: column;
         align-items: center;
         background: $secondary;
+        p{
+            font-family: $font;
+            font-size: 35px;
+            color: $font-color;
+        }
     }
     .cards {
         display: grid;
@@ -49,13 +57,12 @@ $font: "JetBrains Mono", monospace;
             .platforms{
                 img{
                     margin: 5px;
-                    width: 40px;
-                    height: 40px;
-                    transition: transform 0.2s;
+                    width: 45px;
+                    height: 45px;
+                    filter: invert(1);
                 }
                 .github:hover, .linkedin:hover, .instagram:hover{
-                    transform: translateY(-10px);
-                    transition: transform 0.2s;
+                    filter: invert(0.85);
                 }
             }
         }
@@ -67,3 +74,5 @@ $font: "JetBrains Mono", monospace;
         transition: box-shadow 0.2s;
     }
 }
+
+

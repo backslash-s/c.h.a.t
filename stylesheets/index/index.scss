@@ -217,4 +217,18 @@ body{
 }
 
 
+//scrollbar
+body::-webkit-scrollbar{
+    width: 10px;
+    box-shadow: 0px 3px 7px -2px rgb(255, 255, 255);
+}
 
+body::-webkit-scrollbar-track {
+    background: $primary;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 5px;
+}

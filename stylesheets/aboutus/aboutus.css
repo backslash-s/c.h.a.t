@@ -7,26 +7,34 @@
   font-family: "JetBrains Mono", monospace;
 }
 
-.container {
-  max-width: 1200px;
+.container-abt {
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  border: #191919 solid 1px;
+  margin-top: 10vh;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.6);
 }
-.container .aboutus {
+.container-abt .aboutus {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #191919;
 }
-.container .cards {
+.container-abt .aboutus p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 35px;
+  color: #f4f0bb;
+}
+.container-abt .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: #f4f0bb;
 }
-.container .cards .card1,
-.container .cards .card2,
-.container .cards .card3 {
+.container-abt .cards .card1,
+.container-abt .cards .card2,
+.container-abt .cards .card3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,33 +43,32 @@
   background: #272727;
   transition: box-shadow 0.2s;
 }
-.container .cards .card1 p,
-.container .cards .card2 p,
-.container .cards .card3 p {
+.container-abt .cards .card1 p,
+.container-abt .cards .card2 p,
+.container-abt .cards .card3 p {
   font-size: 20px;
   padding-bottom: 10px;
 }
-.container .cards .card1 .platforms img,
-.container .cards .card2 .platforms img,
-.container .cards .card3 .platforms img {
+.container-abt .cards .card1 .platforms img,
+.container-abt .cards .card2 .platforms img,
+.container-abt .cards .card3 .platforms img {
   margin: 5px;
-  width: 40px;
-  height: 40px;
-  transition: transform 0.2s;
+  width: 45px;
+  height: 45px;
+  filter: invert(1);
 }
-.container .cards .card1 .platforms .github:hover, .container .cards .card1 .platforms .linkedin:hover, .container .cards .card1 .platforms .instagram:hover,
-.container .cards .card2 .platforms .github:hover,
-.container .cards .card2 .platforms .linkedin:hover,
-.container .cards .card2 .platforms .instagram:hover,
-.container .cards .card3 .platforms .github:hover,
-.container .cards .card3 .platforms .linkedin:hover,
-.container .cards .card3 .platforms .instagram:hover {
-  transform: translateY(-10px);
-  transition: transform 0.2s;
+.container-abt .cards .card1 .platforms .github:hover, .container-abt .cards .card1 .platforms .linkedin:hover, .container-abt .cards .card1 .platforms .instagram:hover,
+.container-abt .cards .card2 .platforms .github:hover,
+.container-abt .cards .card2 .platforms .linkedin:hover,
+.container-abt .cards .card2 .platforms .instagram:hover,
+.container-abt .cards .card3 .platforms .github:hover,
+.container-abt .cards .card3 .platforms .linkedin:hover,
+.container-abt .cards .card3 .platforms .instagram:hover {
+  filter: invert(0.85);
 }
-.container .card1:hover,
-.container .card2:hover,
-.container .card3:hover {
+.container-abt .card1:hover,
+.container-abt .card2:hover,
+.container-abt .card3:hover {
   box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.75);
   transition: box-shadow 0.2s;
 }
