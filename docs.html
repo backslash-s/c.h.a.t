@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Documentation</title>
+	<link rel="stylesheet" href="./stylesheets/docs/docs.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="navbar">
+			<p><a href="./index.html"><img src="./images/logo.svg" alt="logo"></a></p>
+			<ul>
+				<li><a href="./index.html#section-2">What is chat?</a></li>
+				<li><a href="./docs.html">Documentation</a></li>
+				<li><a href="./aboutus.html">About Us</a></li>
+			</ul>
+		</div>
+		<div class="doc-section">
+			<p>1. Getting Started: python main.py ask "Query"</p>
+			<div class="terminal">
+				<p>chat@chat:~ python main.py ask "How to delete a file named test.txt in the Documents folder?"</p>
+				<p>chat@chat:~ To delete a file named "test.txt" in the Documents folder on Linux, you can use the rm command in the terminal. Here are the steps to follow:<br>
+				1. Open the terminal application on your Linux system.<br>
+				2. Navigate to the Documents folder by typing cd ~/Documents and pressing Enter.<br>
+				3. Type the following command to delete the "test.txt" file:<br>
+				rm test.txt <br>
+				This command will delete the "test.txt" file from the Documents folder.<br>
+				5. Press Enter to execute the command.
+				</p>
+			</div>
+			<p>2. Change engine: python main.py ask "Query" --engine "engine-name"
+			Engine options: 
+				<ul>
+					<li>Ada (text-ada-001)</li>
+					<li>Babbage (text-babbage-001)</li>
+					<li>Curie (text-curie-001)</li>
+					<li>Davinci (text-davinci-003)</li>
+				</ul>
+				<div class="terminal">
+					<p>chat@chat:~ python main.py ask "How to delete a file named test.txt in the Documents folder?" --engine "text-ada-001"</p>
+					<p>chat@chat:~ To delete a file named test.txt in the Documents folder on Linux, you can use the rm command in the terminal:<br>
+					rm ~/Documents/test.txt<br>
+					This command will remove the file test.txt located in the Documents folder in your home directory (~).
+					</p>
+				</div>	
+			</p>
+			<p>3. Change randomness: python main.py ask "Query" --randomness [Randomness between 0 to 1]
+			</p>
+			<p>Randomness decides the level of creativity for generating the response. Lesser randomness means lesser creativity.</p>
+			<div class="terminal">
+				<p>chat@chat:~ python main.py ask "How to delete a file named test.txt in the Documents folder?" --randomness 0.2</p>
+				<p>chat@chat:~ To delete a file named test.txt in the Documents folder on Linux, open a terminal window and type the following command:<br>
+					rm ~/Documents/test.txt</p>
+			</div>
+			<span>History commands</span>
+			<p>1. Show last 10 (default) queries and responses: python main.py history</p>
+			<div class="terminal">
+				<p>chat@chat:~ python main.py history</p>
+				<p>chat@chat:~ <br>
+				Q1: How to delete a file named test.txt in the Documents folder?"<br>
+				Answer:<br>
+				To delete a file named "test.txt in the Documents folder on Linux, you can use the rm command in the terminal. Here are the steps to follow:<br>
+				1. Open the terminal application on your Linux system.<br>
+				2. Navigate to the Documents folder by typing cd ~/Documents and pressing Enter.<br>
+				3. Type the following command to delete the "test.txt" file:<br>
+				rm test.txt <br>
+				This command will delete the "test.txt" file from the Documents folder.<br>
+				5. Press Enter to execute the command.
+				</p>
+				<p>
+				Q2: How to delete a file named test.txt in the Documents folder?<br>
+				Answer: <br>
+				To delete a file named test.txt in the Documents folder on Linux, you can use the rm command in the terminal:<br>
+				rm ~/Documents/test.txt<br>
+				This command will remove the file test.txt located in the Documents folder in your home directory (~).
+				</p>
+				<p>
+				Q3: How to delete a file named test.txt in the Documents folder? <br>
+				Answer: <br>
+				To delete a file named test.txt in the Documents folder on Linux, open a terminal window and type the following command:<br>
+				rm ~/Documents/test.txt
+				</p>
+			</div>
+			<p>2. Show last n queries and responses in detail: python main.py history [n] --detailed [true/false]</p>
+			<p>Detailed history includes query, response, engine used to generate the response, randomness of the response and timestamp of when was the query made.</p>
+			<div class="terminal">
+				<p>chat@chat:~ python main.py history 1 --detailed true</p>
+				<p>
+				Q1: How to delete a file named test.txt in the Documents folder?<br>
+				Answer:<br>
+				To delete a file named "test.txt in the Documents folder on Linux, you can use the rm command in the terminal. Here are the steps to follow:<br>
+				1. Open the terminal application on your Linux system.<br>
+				2. Navigate to the Documents folder by typing cd ~/Documents and pressing Enter.<br>
+				3. Type the following command to delete the "test.txt" file:<br>
+				rm test.txt <br>
+				This command will delete the "test.txt" file from the Documents folder.<br>
+				5. Press Enter to execute the command. <br><br>
+				Engine: text-davinci-003 <br><br>
+				Randomness: 0.5 <br><br>
+				Timestamp: 2023-03-24 15:43:36
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

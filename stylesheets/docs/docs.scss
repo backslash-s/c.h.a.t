@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500&display=swap');
+
+
+//variables
+$dot-red: #F00000;
+$dot-yellow: #FFB700;
+$dot-green: #70E000;
+$font-color: #F4F0BB;
+$primary: #272727;
+$secondary: #191919;
+$font: 'JetBrains Mono', monospace;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: $secondary;
+}
+
+.navbar{
+    padding: 10px;
+    font-family: $font;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    background: $secondary;
+    z-index: 1;
+    box-shadow: 0px 0px 44px 4px rgba(0,0,0,0.75);
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        margin-right: 50px;
+    }
+    li{
+        list-style: none;
+        margin-right: 25px;
+        font-size: 23px;
+    }
+    img{
+        filter:invert(1);
+        width: 40px;
+        margin: 10px;
+        // justify-self: start;
+    }
+    a{
+        text-decoration: none;
+        color: $font-color;
+        // font-size: 25px;
+    }
+}
+
+.doc-section{
+	max-width: 90%;
+	margin-left: 12px;
+	p{
+		margin: 20px;
+		font-family: $font;
+		color: $font-color;
+		font-size: 20px;
+	}
+	span{
+		margin: 20px;
+		font-family: $font;
+		color: $font-color;
+		font-size: 25px;
+	}
+	li{
+		font-family: $font;
+		color: $font-color;
+		font-size: 20px;
+		margin-left: 40px;
+	}
+}
+
+.terminal{
+	background: #050505;
+	// max-width: 80%;
+	margin: 20px;
+	// margin-top: 20px;
+	// margin-left: 20px;
+	padding: 5px;
+	border-radius: 5px;
+	line-height: 30px;
+}
+
+//scrollbar
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: $primary;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 5px;
+}
+
+//selection
+::-moz-selection {
+    color: $primary;
+    background: $font-color;
+}
+
+::selection {
+    color: $primary;
+    background: $font-color;
+}

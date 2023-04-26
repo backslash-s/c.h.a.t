@@ -54,6 +54,9 @@ body {
   border-bottom-right-radius: 7px;
 }
 
+.terminal {
+  line-height: 25px;
+}
 .terminal .titlebar {
   background: #272727;
   position: relative;
@@ -205,7 +208,6 @@ body {
 
 body::-webkit-scrollbar {
   width: 10px;
-  box-shadow: 0px 3px 7px -2px rgb(255, 255, 255);
 }
 
 body::-webkit-scrollbar-track {
@@ -216,4 +218,14 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #424242;
   border-radius: 5px;
+}
+
+::-moz-selection {
+  color: #272727;
+  background: #F4F0BB;
+}
+
+::selection {
+  color: #272727;
+  background: #F4F0BB;
 }

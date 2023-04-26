@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #191919;
+}
+
+.navbar {
+  padding: 10px;
+  font-family: "JetBrains Mono", monospace;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  background: #191919;
+  z-index: 1;
+  box-shadow: 0px 0px 44px 4px rgba(0, 0, 0, 0.75);
+}
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  margin-right: 50px;
+}
+.navbar li {
+  list-style: none;
+  margin-right: 25px;
+  font-size: 23px;
+}
+.navbar img {
+  filter: invert(1);
+  width: 40px;
+  margin: 10px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #F4F0BB;
+}
+
+.doc-section {
+  max-width: 90%;
+  margin-left: 12px;
+}
+.doc-section p {
+  margin: 20px;
+  font-family: "JetBrains Mono", monospace;
+  color: #F4F0BB;
+  font-size: 20px;
+}
+.doc-section span {
+  margin: 20px;
+  font-family: "JetBrains Mono", monospace;
+  color: #F4F0BB;
+  font-size: 25px;
+}
+.doc-section li {
+  font-family: "JetBrains Mono", monospace;
+  color: #F4F0BB;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.terminal {
+  background: #050505;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  line-height: 30px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #272727;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 5px;
+}
+
+::-moz-selection {
+  color: #272727;
+  background: #F4F0BB;
+}
+
+::selection {
+  color: #272727;
+  background: #F4F0BB;
+}

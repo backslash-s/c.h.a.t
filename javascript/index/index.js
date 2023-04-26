@@ -21,8 +21,8 @@ if(cmdOne.innerHTML.length === 12){
 function autoType2(){
     if(j < text2.length){
         
-        cmdTwo.innerHTML += text2.charAt(j)
-        j+=1
+        cmdTwo.innerHTML += (text2.charAt(j)+text2.charAt(j+1)+text2.charAt(j+2)) 
+        j+=3
         setTimeout(autoType2, 20)
     }
 }
